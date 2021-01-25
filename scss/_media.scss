@@ -1,0 +1,134 @@
+/* Адаптивный контейнер */
+@media (max-width: 1199.98px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (max-width: 991.98px) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media (max-width: 767.98px) {
+    .container {
+        max-width: 540px;
+    }
+}
+@media (max-width: 575.98px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+/* Переменные */
+
+
+@media (max-width: 1199.98px) {
+    /* Переменные */
+    // $fz-h1: 40px;
+    // $fz-title: 30px;
+    // $fz-subtitle: 20px;
+    // $fz-text: 16px;
+
+}
+@media (max-width: 991.98px) {
+    /* Переменные */
+    $fz-h1: 30px;
+    $fz-title: 30px;
+    $fz-subtitle: 20px;
+    $fz-text: 16px;
+
+    .main {
+        &__row {
+            width: 70%;
+        }
+    }
+
+    .photos {
+        height: 200px;
+    }
+}
+@media (max-width: 767.98px) {
+    .main {
+        &__row {
+            width: 90%;
+        }
+    }
+
+    .portfolio {
+        &__slider {
+            flex: 0 1 250px;
+        }
+    }
+
+    .photos {
+        height: 150px;
+
+        &__slide {
+            padding: 0 25px;
+        }
+    }
+}
+@media (max-width: 575.98px) {
+    /* Переменные */
+    $fz-h1: 25px;
+    $fz-title: 22px;
+    $fz-subtitle: 16px;
+    $fz-text: 14px;
+
+    .wrapper {
+        .swiper-pagination-bullet {
+            width: 15px;
+            height: 15px;
+        }
+    }
+
+    .main {
+        &__row {
+            width: 100%;
+        }
+
+        &__title {
+            font-size: $fz-h1;
+        }
+    
+        &__subtitle {
+            font-size: $fz-title;
+        }
+    
+        &__text {
+            font-size: $fz-subtitle;
+        }
+
+        &__link {
+            font-size: $fz-text;
+        }
+    }
+
+    .portfolio {
+        &__slider {
+            flex: 0 1 200px;
+        }
+    }
+
+    .reviews {
+        &__words {
+            flex: 0 1 100%;
+        }
+        
+        &__photos {
+            flex: 0 1 100%;
+        }
+    }
+
+    .words {
+        text-align: center;
+        margin: 0 0 20px 0;
+    }
+
+    .photos {
+        &__slide {
+            padding: 0 50px;
+        }
+    }
+}
