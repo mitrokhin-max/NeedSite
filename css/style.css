@@ -101,6 +101,10 @@ h1, h2, h3, h4, h5, h6 {
   background-repeat: no-repeat;
 }
 
+.wrapper__page {
+  overflow-y: hidden;
+}
+
 .wrapper .swiper-pagination-bullet {
   width: 20px;
   height: 20px;
