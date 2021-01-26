@@ -53,3 +53,6 @@ var photos = new Swiper('.photos', {
         prevEl: '.photos__button-prev',
     },
 });
+
+var Scrollbar = window.Scrollbar;
+Scrollbar.init(document.querySelector('.plan'));

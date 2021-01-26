@@ -87,6 +87,7 @@ h1, h2, h3, h4, h5, h6 {
 .wrapper {
   width: 100%;
   height: 100vh;
+  overflow: hidden;
 }
 
 .wrapper__bg {
@@ -305,6 +306,89 @@ body, html {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px;
+}
+
+.plan {
+  height: 100%;
+}
+
+.plan__row {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.plan__content {
+  width: 60%;
+}
+
+.plan__point {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.plan__point::after {
+  content: '';
+  position: absolute;
+  top: 50px;
+  left: 25px;
+  width: 2px;
+  height: 100%;
+  background-color: #a6e64d;
+}
+
+.plan__point:last-child::after {
+  display: none;
+}
+
+.plan__number {
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #fff;
+  min-width: 50px;
+  min-height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: #a6e64d 2px solid;
+  border-radius: 50%;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin: 0 30px 0 0;
+}
+
+.plan__text {
+  padding: 0 0 20px 0;
+  color: #fff;
+}
+
+.plan__subtitle {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 10px 0;
+}
+
+.plan__description {
+  font-size: 16px;
 }
 
 /* Попап */
@@ -553,6 +637,9 @@ body, html {
 /* Переменные */
 @media (max-width: 1199.98px) {
   /* Переменные */
+  .plan__content {
+    width: 70%;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -562,6 +649,9 @@ body, html {
   }
   .photos {
     height: 200px;
+  }
+  .plan__content {
+    width: 90%;
   }
 }
 
@@ -579,6 +669,9 @@ body, html {
   }
   .photos__slide {
     padding: 0 25px;
+  }
+  .plan__content {
+    width: 100%;
   }
 }
 
@@ -624,5 +717,21 @@ body, html {
   }
   .photos__slide {
     padding: 0 50px;
+  }
+  .plan__point::after {
+    top: 40px;
+    left: 20px;
+  }
+  .plan__number {
+    font-size: 16px;
+    min-width: 40px;
+    min-height: 40px;
+    margin: 0 20px 0 0;
+  }
+  .plan__subtitle {
+    font-size: 16px;
+  }
+  .plan__description {
+    font-size: 14px;
   }
 }
