@@ -147,13 +147,16 @@ $fz-text: 16px;
 
     &__slider {
         width: 100%;
-        flex: 0 1 300px;
+        flex: 0 1 560px;
+        padding: 0 0 60px 0;
     }
 
     &__wrap {
     }
 
     &__slide {
+        width: 500px;
+        height: 500px;
     }
 
     &__screen {
@@ -171,6 +174,18 @@ $fz-text: 16px;
         &_ya {
             background-image: url(../img/3.jpg);
         }
+    }
+
+    &__btn-prev, &__btn-next {
+        top: 96%;
+    }
+
+    &__btn-prev {
+        left: calc(50% - 50px);
+    }
+
+    &__btn-next {
+        left: calc(50% + 50px);
     }
 }
 

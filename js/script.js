@@ -1,12 +1,8 @@
 var wrapper = new Swiper('.wrapper', {
     direction: 'vertical',
-    effect: 'fade',
-    fadeEffect: {
-        crossFade: true
-    },
     mousewheel: true,
-    loop: false,
     parallax: true,
+    speed: 700,
 
     pagination: {
         el: '.wrapper__menu',
@@ -20,9 +16,9 @@ var portfolio = new Swiper('.portfolio__slider', {
     speed: 800,
     grabCursor: true,
     centeredSlides: true,
-    slidesPerView: 3,
-    spaceBetween: 0,
+    slidesPerView: 'auto',
     loop: true,
+    nested: true,
     coverflowEffect: {
         rotate: 50,
         stretch: 0,
@@ -30,12 +26,29 @@ var portfolio = new Swiper('.portfolio__slider', {
         modifier: 1,
         slideShadows: true,
     },
+    navigation: {
+        nextEl: '.portfolio__btn-next',
+        prevEl: '.portfolio__btn-prev',
+    },
+
+    breakpoints: {
+        576: {
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+        },
+    }
 });
 
 var words = new Swiper('.words', {
     // watchSlidesProgress: true,
     // watchSlidesVisibility: true,
-    allowTouchMove: false,
+    // allowTouchMove: false,
+    nested: true,
     autoHeight: true,
     slidesPerView: 1,
     effect: 'fade',
@@ -45,9 +58,10 @@ var words = new Swiper('.words', {
 });
 
 var photos = new Swiper('.photos', {
-    thumbs: {
-        swiper: words,
-    },
+    // controller: {
+    //     control: words,
+    // },
+    nested: true,
     slidesPerView: 1,
     centeredSlides: true,
     navigation: {
@@ -55,7 +69,9 @@ var photos = new Swiper('.photos', {
         prevEl: '.photos__button-prev',
     },
 });
-
+// Управление друг другом
+words.controller.control = photos;
+photos.controller.control = words;
 
 const mediaQuery = window.matchMedia('(max-width: 575.98px)')
 function handleTabletChange(e) {
