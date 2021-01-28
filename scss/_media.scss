@@ -152,24 +152,33 @@
     .plan {
         &__point {
             &::after {
-                top: 40px;
-                left: 20px;
+                top: 30px;
+                left: 15px;
             }
         }
 
         &__number {
             font-size: $fz-subtitle;
-            min-width: 40px;
-            min-height: 40px;
-            margin: 0 20px 0 0;
+            min-width: 30px;
+            min-height: 30px;
+            margin: 0 10px 0 0;
+        }
+
+        &__text {
         }
 
         &__subtitle {
             font-size: $fz-subtitle;
+            margin: 0 0 5px 0;
+            padding: 8px 0px 0 0;
         }
 
         &__description {
             font-size: $fz-text;
+            display: none;
+                &_1 {
+                    display: block;
+                }
         }
     }
 }

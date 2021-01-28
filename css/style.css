@@ -83,11 +83,15 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
 }
 
+/* Убираю скролл */
+body, html {
+  overflow: hidden;
+}
+
 /* Основная оболочка сайта */
 .wrapper {
   width: 100%;
   height: 100vh;
-  overflow: hidden;
 }
 
 .wrapper__bg {
@@ -99,10 +103,6 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-.wrapper__page {
-  overflow-y: hidden;
 }
 
 .wrapper .swiper-pagination-bullet {
@@ -190,6 +190,7 @@ body, html {
 }
 
 .title {
+  text-align: center;
   color: #a6e64d;
   font-size: 30px;
   font-weight: 500;
@@ -723,19 +724,25 @@ body, html {
     padding: 0 50px;
   }
   .plan__point::after {
-    top: 40px;
-    left: 20px;
+    top: 30px;
+    left: 15px;
   }
   .plan__number {
     font-size: 16px;
-    min-width: 40px;
-    min-height: 40px;
-    margin: 0 20px 0 0;
+    min-width: 30px;
+    min-height: 30px;
+    margin: 0 10px 0 0;
   }
   .plan__subtitle {
     font-size: 16px;
+    margin: 0 0 5px 0;
+    padding: 8px 0px 0 0;
   }
   .plan__description {
     font-size: 14px;
+    display: none;
+  }
+  .plan__description_1 {
+    display: block;
   }
 }

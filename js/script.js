@@ -17,6 +17,7 @@ var wrapper = new Swiper('.wrapper', {
 
 var portfolio = new Swiper('.portfolio__slider', {
     effect: 'coverflow',
+    speed: 800,
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: 3,
@@ -54,5 +55,22 @@ var photos = new Swiper('.photos', {
     },
 });
 
-var Scrollbar = window.Scrollbar;
-Scrollbar.init(document.querySelector('.plan'));
+
+const mediaQuery = window.matchMedia('(max-width: 575.98px)')
+function handleTabletChange(e) {
+    if (e.matches) {
+        $(document).ready(function() {
+    
+            /* Аккордеон */
+            $('.plan__subtitle').click(function(event) {
+                if ($('.plan__text').hasClass('akkordeon')) {
+                    $('.plan__subtitle').not($(this)).removeClass('active');
+                    $('.plan__description').not($(this).next()).slideUp(300);
+                }
+                $(this).toggleClass('active').next().slideToggle(300);
+            });
+        });
+    }
+}
+mediaQuery.addListener(handleTabletChange)
+handleTabletChange(mediaQuery)
