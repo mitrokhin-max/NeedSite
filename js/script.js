@@ -35,6 +35,7 @@ var portfolio = new Swiper('.portfolio__slider', {
 var words = new Swiper('.words', {
     // watchSlidesProgress: true,
     // watchSlidesVisibility: true,
+    allowTouchMove: false,
     autoHeight: true,
     slidesPerView: 1,
     effect: 'fade',
@@ -74,11 +75,3 @@ function handleTabletChange(e) {
 }
 mediaQuery.addListener(handleTabletChange)
 handleTabletChange(mediaQuery)
-
-window.addEventListener("load", function() {
-    rfs = document.documentElement.requestFullScreen 
-        || document.documentElement.webkitRequestFullScreen
-        || document.documentElement.mozRequestFullScreen
-        
-    rfs.call(document.documentElement)
-});
