@@ -169,15 +169,15 @@
     .plan {
         &__point {
             &::after {
-                top: 30px;
-                left: 15px;
+                top: 40px;
+                left: 19px;
             }
         }
 
         &__number {
             font-size: $fz-subtitle;
-            min-width: 30px;
-            min-height: 30px;
+            min-width: 40px;
+            min-height: 40px;
             margin: 0 10px 0 0;
         }
 
