@@ -277,22 +277,33 @@ $fz-text: 16px;
     &__content {
         display: flex;
         flex-wrap: wrap;
-        margin: 0 -20px;
+        // margin: 0 -10px;
+    }
+
+    &__column {
+        overflow: hidden;
+        // padding: 0 10px;
+        &_w {
+            flex: 0 0 60%;
+        }
+
+        &_ph {
+            flex: 0 0 40%;
+            display: flex;
+            align-items: center;
+        }
     }
 
     &__words {
-        flex: 0 1 60%;
-        padding: 0 20px;
     }
 
     &__photos {
-        flex: 0 1 40%;
-        padding: 0 20px;
     }
 }
 
 .words {
-    // height: 150px;
+    width: 100%;
+    height: auto;
 
     &__wrap {
     }
@@ -313,20 +324,21 @@ $fz-text: 16px;
 }
 
 .photos {
-    height: 250px;
+    width: 250px;
+    height: 150px;
 
     &__wrap {
     }
 
     &__slide {
-        padding: 0 40px;
+        padding: 0 50px;
         
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 5px;
-        }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+            }
     }
 
     &__button-prev {

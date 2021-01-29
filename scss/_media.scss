@@ -61,7 +61,12 @@
     }
 
     .photos {
-        height: 200px;
+        width: 200px;
+        height: 100px;
+
+        &__slide {
+            padding: 0 50px;
+        }
     }
 
     .plan {
@@ -85,14 +90,6 @@
     .main {
         &__row {
             width: 90%;
-        }
-    }
-
-    .photos {
-        height: 150px;
-
-        &__slide {
-            padding: 0 25px;
         }
     }
 
@@ -157,24 +154,17 @@
     }
 
     .reviews {
-        &__words {
+        &__column {
             flex: 0 1 100%;
+                &_w {
+                    margin: 0 0 50px 0;
+                }
         }
-        
-        &__photos {
-            flex: 0 1 100%;
-        }
+
     }
 
     .words {
         text-align: center;
-        margin: 0 0 20px 0;
-    }
-
-    .photos {
-        &__slide {
-            padding: 0 50px;
-        }
     }
 
     .plan {

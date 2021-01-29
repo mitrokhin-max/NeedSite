@@ -362,21 +362,33 @@ body, html {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 0 -20px;
 }
 
-.reviews__words {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 60%;
-          flex: 0 1 60%;
-  padding: 0 20px;
+.reviews__column {
+  overflow: hidden;
 }
 
-.reviews__photos {
+.reviews__column_w {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 40%;
-          flex: 0 1 40%;
-  padding: 0 20px;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
+}
+
+.reviews__column_ph {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.words {
+  width: 100%;
+  height: auto;
 }
 
 .words__name {
@@ -391,11 +403,12 @@ body, html {
 }
 
 .photos {
-  height: 250px;
+  width: 250px;
+  height: 150px;
 }
 
 .photos__slide {
-  padding: 0 40px;
+  padding: 0 50px;
 }
 
 .photos__slide img {
@@ -403,7 +416,7 @@ body, html {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 5px;
+  border-radius: 50%;
 }
 
 .plan {
@@ -874,7 +887,11 @@ body, html {
     height: 350px;
   }
   .photos {
-    height: 200px;
+    width: 200px;
+    height: 100px;
+  }
+  .photos__slide {
+    padding: 0 50px;
   }
   .plan__content {
     width: 90%;
@@ -893,12 +910,6 @@ body, html {
 @media (max-width: 767.98px) {
   .main__row {
     width: 90%;
-  }
-  .photos {
-    height: 150px;
-  }
-  .photos__slide {
-    padding: 0 25px;
   }
   .plan__content {
     width: 100%;
@@ -941,22 +952,16 @@ body, html {
     width: 300px;
     height: 350px;
   }
-  .reviews__words {
+  .reviews__column {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 100%;
             flex: 0 1 100%;
   }
-  .reviews__photos {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 100%;
-            flex: 0 1 100%;
+  .reviews__column_w {
+    margin: 0 0 50px 0;
   }
   .words {
     text-align: center;
-    margin: 0 0 20px 0;
-  }
-  .photos__slide {
-    padding: 0 50px;
   }
   .plan__point::after {
     top: 40px;
