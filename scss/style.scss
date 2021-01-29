@@ -160,6 +160,7 @@ $fz-text: 16px;
         transition: 300ms;
         background-position: center;
         background-size: cover;
+        background-repeat: no-repeat;
 
         &_monitor {
             background-image: url(../img/monitor.svg);
@@ -404,7 +405,120 @@ $fz-text: 16px;
     }
 }
 
+.price {
+    height: 100%;
+    &__container {
+    }
 
+    &__slider {
+        
+    }
+
+    &__wrap {
+    }
+
+    &__slide {
+        
+    }
+}
+
+.price {
+    height: 100%;
+
+    &__container {
+    }
+
+    &__row {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__body {
+        // height: 100%;
+    }
+
+    &__slider {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__wrap {
+    }
+
+    &__slide {
+        height: auto;
+    }
+
+    &__title {
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+    }
+
+    &__column {
+        // border: 1px solid red;
+        flex: 0 1 25%;
+        padding: 0 10px;
+        display: flex;
+    }
+
+    &__card {
+        flex: 0 1 100%;
+    }
+}
+
+.card {
+    min-height: 200px;
+    background-color: rgba(243, 243, 243, 0.6);
+    border-radius: 10px;
+
+    &__row {
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    &__title {
+        flex: 0 1 100%;
+        font-size: $fz-subtitle;
+        font-weight: 500;
+        white-space: nowrap;
+        padding: 20px 0px 20px 20px;
+    }
+
+    &__list {
+        flex: 0 1 100%;
+        padding: 10px 5px 10px 20px;
+    }
+
+    &__advantage {
+        font-size: $fz-text;
+        margin: 3px 0px;
+    }
+
+    &__price {
+        flex: 0 1 100%;
+        align-self: flex-end;
+        font-size: $fz-subtitle;
+        white-space: nowrap;
+        padding: 20px 0px 20px 20px;
+        s {
+            font-size: $fz-text;
+        }
+        span {
+            color: rgb(255, 0, 0);
+        }
+        &_b {
+            font-size: $fz-text;
+        }
+    }
+}
 
 /* Попап */
 .popup {

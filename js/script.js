@@ -102,3 +102,11 @@ $('.advantages__tabs').each(function() {
 		ths.find('.advantages__description').hide().eq($(this).index()).fadeIn()
 	}).eq(0).addClass('active');
 });
+
+var price = new Swiper('.price__slider', {
+    direction: 'vertical',
+    slidesPerView: 'auto',
+    freeMode: true,
+    nested: true,
+    mousewheel: true,
+});
