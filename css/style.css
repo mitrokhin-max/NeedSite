@@ -79,7 +79,7 @@ h1, h2, h3, h4, h5, h6 {
 .container {
   max-width: 1140px;
   margin: 0 auto;
-  padding: 0 30px 0 15px;
+  padding: 0 15px 0 15px;
   height: 100%;
 }
 
@@ -197,6 +197,80 @@ body, html {
   margin: 0 0 40px 0;
 }
 
+.advantages {
+  height: 100%;
+}
+
+.advantages__row {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.advantages__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0 0 30px 0;
+}
+
+.advantages__icon {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 70px;
+          flex: 0 1 70px;
+  height: 70px;
+  cursor: pointer;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  background-position: center;
+  background-size: cover;
+}
+
+.advantages__icon_monitor {
+  background-image: url(../img/monitor.svg);
+}
+
+.advantages__icon_monitor.active, .advantages__icon_monitor:hover {
+  background-image: url(../img/monitor-active.svg);
+}
+
+.advantages__icon_like {
+  background-image: url(../img/like.svg);
+}
+
+.advantages__icon_like.active, .advantages__icon_like:hover {
+  background-image: url(../img/like-active.svg);
+}
+
+.advantages__icon_presentation {
+  background-image: url(../img/presentation.svg);
+}
+
+.advantages__icon_presentation.active, .advantages__icon_presentation:hover {
+  background-image: url(../img/presentation-active.svg);
+}
+
+.advantages__description {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.2em;
+  display: none;
+}
+
+.advantages__description.active {
+  display: block;
+}
+
 .portfolio {
   height: 100%;
 }
@@ -256,11 +330,11 @@ body, html {
 }
 
 .portfolio__btn-prev {
-  left: calc(50% - 50px);
+  left: calc(48% - 50px);
 }
 
 .portfolio__btn-next {
-  left: calc(50% + 50px);
+  left: calc(48.5% + 50px);
 }
 
 .reviews {
@@ -722,6 +796,12 @@ body, html {
   }
   .main__link {
     font-size: 14px;
+  }
+  .advantages__icon {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50px;
+            flex: 0 1 50px;
+    height: 50px;
   }
   .portfolio__slider {
     -webkit-box-flex: 0;

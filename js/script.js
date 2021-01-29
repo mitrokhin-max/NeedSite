@@ -73,6 +73,7 @@ var photos = new Swiper('.photos', {
 words.controller.control = photos;
 photos.controller.control = words;
 
+// Схема работы
 const mediaQuery = window.matchMedia('(max-width: 575.98px)')
 function handleTabletChange(e) {
     if (e.matches) {
@@ -91,3 +92,13 @@ function handleTabletChange(e) {
 }
 mediaQuery.addListener(handleTabletChange)
 handleTabletChange(mediaQuery)
+
+// Табы
+$('.advantages__tabs').each(function() {
+	let ths = $(this);
+	ths.find('.advantages__description').not(':first').hide();
+	ths.find('.advantages__icon').click(function() {
+		ths.find('.advantages__icon').removeClass('active').eq($(this).index()).addClass('active');
+		ths.find('.advantages__description').hide().eq($(this).index()).fadeIn()
+	}).eq(0).addClass('active');
+});
