@@ -125,6 +125,13 @@
     $fz-text: 14px;
 
     .wrapper {
+        &__page {
+            padding: 0 0 100px 0;
+                &:nth-child(6) {
+                    padding: 0 0 0px 0;
+                }
+        }
+
         .swiper-pagination-bullet {
             width: 15px;
             height: 15px;
@@ -220,7 +227,10 @@
     }
 
     .price {
-        padding: 20px 0 100px 0;
+        &__slide {
+            padding: 20px 0 100px 0;
+        }
+
         &__body {
             height: 100%;
         }
