@@ -239,7 +239,7 @@ body, html {
   background-image: url(../img/monitor.svg);
 }
 
-.advantages__icon_monitor.active {
+.advantages__icon_monitor.active, .advantages__icon_monitor:hover {
   background-image: url(../img/monitor-active.svg);
 }
 
@@ -504,10 +504,6 @@ body, html {
   height: 100%;
 }
 
-.price {
-  height: 100%;
-}
-
 .price__row {
   height: 100%;
   display: -webkit-box;
@@ -692,6 +688,7 @@ body, html {
 
 .form-contacts__title {
   font-size: 20px;
+  font-weight: 500;
   text-align: center;
   margin: 0px 0px 20px 0px;
 }
@@ -1142,7 +1139,7 @@ body, html {
     font-size: 22px;
   }
   .main__text {
-    font-size: 16px;
+    font-size: 18px;
   }
   .main__link {
     font-size: 14px;
@@ -1178,21 +1175,18 @@ body, html {
     left: 19px;
   }
   .plan__number {
-    font-size: 16px;
+    font-size: 18px;
     min-width: 40px;
     min-height: 40px;
     margin: 0 10px 0 0;
   }
   .plan__text {
-    padding: 0 0 10px 0;
+    padding: 0 0 20px 0;
   }
   .plan__subtitle {
-    font-size: 16px;
-    margin: 0 0 20px 0;
-    padding: 8px 0px 0 0;
-  }
-  .plan__subtitle.active {
+    font-size: 18px;
     margin: 0 0 10px 0;
+    padding: 8px 0px 0 0;
   }
   .plan__description {
     font-size: 14px;
@@ -1202,7 +1196,7 @@ body, html {
     display: block;
   }
   .price {
-    padding: 50px 0;
+    padding: 20px 0 100px 0;
   }
   .price__body {
     height: 100%;
@@ -1228,13 +1222,14 @@ body, html {
             flex: 0 1 100%;
   }
   .contacts__contact {
+    font-size: 18px;
     margin: 10px 0;
   }
   .form-contacts {
-    padding: 10px;
+    padding: 30px 20px;
   }
   .form-contacts__title {
-    font-size: 16px;
+    font-size: 18px;
   }
   .form-contacts__name {
     font-size: 14px;
@@ -1248,11 +1243,8 @@ body, html {
     font-size: 14px;
     padding: 10px 15px;
   }
-  .form-contacts__privacy {
-    font-size: 12px;
-  }
   .form-contacts__button {
-    font-size: 16px;
+    font-size: 18px;
     padding: 10px 15px;
   }
 }

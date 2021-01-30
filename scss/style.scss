@@ -164,7 +164,7 @@ $fz-text: 16px;
 
         &_monitor {
             background-image: url(../img/monitor.svg);
-                &.active {
+                &.active, &:hover {
                     background-image: url(../img/monitor-active.svg);
                 }
         }
@@ -418,23 +418,6 @@ $fz-text: 16px;
 
 .price {
     height: 100%;
-    &__container {
-    }
-
-    &__slider {
-        
-    }
-
-    &__wrap {
-    }
-
-    &__slide {
-        
-    }
-}
-
-.price {
-    height: 100%;
 
     &__container {
     }
@@ -591,6 +574,7 @@ $fz-text: 16px;
 
     &__title {
         font-size: $fz_subtitle;
+        font-weight: 500;
         text-align: center;
         margin: 0px 0px 20px 0px;
     }
