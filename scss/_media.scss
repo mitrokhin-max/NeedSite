@@ -98,6 +98,24 @@
             width: 100%;
         }
     }
+
+    .contacts {
+        &__column {
+            &:first-child {
+                flex: 0 1 55%;
+            }
+            &:last-child {
+                flex: 0 1 45%;
+            }
+        }
+
+        &__contact {
+            font-size: $fz-text;
+            img {
+                margin: 0 7px 0 0 ;
+            }
+        }
+    }
 }
 @media (max-width: 575.98px) {
     /* Переменные */
@@ -205,6 +223,7 @@
     }
 
     .price {
+        padding: 50px 0;
         &__body {
             height: 100%;
         }
@@ -217,5 +236,53 @@
 
     .card {
         min-height: 250px;
+    }
+
+    .contacts {
+        &__column {
+            &:first-child {
+                flex: 0 1 100%;
+                margin: 0 0 15px 0;
+            }
+            &:last-child {
+                flex: 0 1 100%;
+            }
+        }
+
+        &__contact {
+            margin: 10px 0;
+        }
+    }
+
+    .form-contacts {
+        padding: 10px;
+
+        &__title {
+            font-size: $fz_subtitle;
+        }
+
+        &__name {
+            font-size: $fz_text;
+            padding: 10px;
+        }
+    
+        &__phone {
+            font-size: $fz_text;
+            padding: 10px;
+        }
+    
+        &__comment {
+            font-size: $fz_text;
+            padding: 10px 15px;
+        }
+
+        &__privacy {
+            font-size: 12px;
+        }
+
+        &__button {
+            font-size: $fz_subtitle;
+            padding: 10px 15px;
+        }
     }
 }

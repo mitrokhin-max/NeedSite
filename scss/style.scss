@@ -157,15 +157,14 @@ $fz-text: 16px;
         flex: 0 1 70px;
         height: 70px;
         cursor: pointer;
-        transition: 300ms;
+        // transition: 300ms;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
 
         &_monitor {
             background-image: url(../img/monitor.svg);
-            
-                &.active, &:hover {
+                &.active {
                     background-image: url(../img/monitor-active.svg);
                 }
         }
@@ -250,11 +249,11 @@ $fz-text: 16px;
     }
 
     &__btn-prev {
-        left: calc(48% - 50px);
+        left: calc(50% - 16px - 50px);
     }
 
     &__btn-next {
-        left: calc(48.5% + 50px);
+        left: calc(50% - 16px + 50px);
     }
 }
 
@@ -532,6 +531,175 @@ $fz-text: 16px;
     }
 }
 
+.contacts {
+    height: 100%;
+
+    &__container {
+    }
+
+    &__row {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__title {
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+    }
+
+    &__column {
+        flex: 0 1 50%;
+        padding: 0 10px;
+    }
+
+    &__body {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__list {
+    }
+
+    &__contact {
+        font-size: $fz-subtitle;
+        color: $color-second;
+        // white-space: nowrap;
+        margin: 20px 0;
+        img {
+            width: 20px;
+            height: 20px;
+            margin: 0 10px 0 0 ;
+        }
+    }
+}
+
+.form-contacts {
+    max-width: 450px;
+    background-color: rgba(240, 240, 240, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+
+    &__title {
+        font-size: $fz_subtitle;
+        text-align: center;
+        margin: 0px 0px 20px 0px;
+    }
+
+    &__item {
+        margin: 0px 0px 15px 0px;
+        text-align: center;
+            &:last-child {
+                margin: 0px 0px 0px 0px;
+            }
+    }
+
+    &__name {
+        font-size: $fz_text;
+        text-align: center;
+        padding: 10px;
+        border-radius: 50px;
+        width: 100%;
+        transition: 300ms;
+            &:focus {
+                box-shadow: 0 0 15px $color_second;
+            }
+    }
+
+    &__phone {
+        font-size: $fz_text;
+        text-align: center;
+        padding: 10px;
+        border-radius: 50px;
+        width: 100%;
+            &:focus {
+                box-shadow: 0 0 15px $color_second;
+            }
+    }
+
+    &__comment {
+        font-size: $fz_text;
+        text-align: center;
+        padding: 10px 15px;
+        border-radius: 25px;
+        width: 100%;
+        resize: none;
+            &:focus {
+                box-shadow: 0 0 15px $color_second;
+            }
+    }
+
+    &__checkbox {
+        display: none;
+
+        &:checked + .form-contacts__privacy::after {
+            transform: scale(1);
+        }
+    }
+
+    &__privacy {
+        padding: 0 0 0 20px;
+        font-size: 14px;
+        line-height: 1.2em;
+        color: #000;
+        position: relative;
+        cursor: pointer;
+        
+            a {
+                color: #000;
+                text-decoration: underline;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 16px;
+                height: 16px;
+                background-color: #fff;
+                border-radius: 4px;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 3px;
+                left: 3px;
+                width: 10px;
+                height: 10px;
+                background-color: $color_first;
+                border-radius: 2px;
+                transform: scale(0);
+                transition: 300ms;
+            }
+    }
+
+    &__button {
+        font-size: $fz_subtitle;
+        font-weight: 500;
+        padding: 10px 15px;
+        border-radius: 10px;
+        background-color: $color_first;
+        transition: 300ms;
+            &:hover {
+                transform: scale(1.1);
+            }
+    }
+}
+
 /* Попап */
 .popup {
     position: fixed;
@@ -717,8 +885,6 @@ $fz-text: 16px;
         }
     }
 }
-
-
 
 /* Адаптив */
 @import 'media';
