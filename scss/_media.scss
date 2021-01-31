@@ -160,6 +160,10 @@
         }
     }
 
+    .title {
+        margin: 0 0 30px 0;
+    }
+
     .advantages {
         &__icon {
             flex: 0 1 50px;
@@ -182,7 +186,7 @@
         &__column {
             flex: 0 1 100%;
                 &_w {
-                    margin: 0 0 50px 0;
+                    margin: 0 0 30px 0;
                 }
         }
 
@@ -249,7 +253,7 @@
         &__column {
             &:first-child {
                 flex: 0 1 100%;
-                margin: 0 0 15px 0;
+                margin: 0 0 10px 0;
             }
             &:last-child {
                 flex: 0 1 100%;
