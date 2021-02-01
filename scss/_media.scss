@@ -185,12 +185,17 @@
 
     .portfolio {
         &__slider {
-            flex: 0 1 400px;
+            flex: 0 1 350px;
         }
 
         &__slide {
             width: 300px;
-            height: 350px;
+            height: 300px;
+        }
+
+        &__btn-prev, &__btn-next {
+            width: 30px;
+            height: 30px;
         }
     }
 
@@ -201,11 +206,17 @@
                     margin: 0 0 30px 0;
                 }
         }
-
     }
 
     .words {
         text-align: center;
+    }
+
+    .photos {
+        &__button-prev, &__button-next {
+            width: 30px;
+            height: 30px;
+        }
     }
 
     .plan {

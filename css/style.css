@@ -304,7 +304,7 @@ body, html {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 560px;
           flex: 0 1 560px;
-  padding: 0 0 60px 0;
+  position: relative;
 }
 
 .portfolio__slide {
@@ -326,7 +326,18 @@ body, html {
 }
 
 .portfolio__btn-prev, .portfolio__btn-next {
-  top: 96%;
+  position: absolute;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.portfolio__btn-prev img, .portfolio__btn-next img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .portfolio__btn-prev {
@@ -404,6 +415,7 @@ body, html {
 .photos {
   width: 250px;
   height: 150px;
+  position: relative;
 }
 
 .photos__slide {
@@ -416,6 +428,30 @@ body, html {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
+}
+
+.photos__button-prev, .photos__button-next {
+  position: absolute;
+  z-index: 1;
+  top: calc(50% - 15px);
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.photos__button-prev img, .photos__button-next img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.photos__button-prev {
+  left: 0;
+}
+
+.photos__button-next {
+  right: 0;
 }
 
 .plan {
@@ -1173,12 +1209,16 @@ body, html {
   }
   .portfolio__slider {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 400px;
-            flex: 0 1 400px;
+        -ms-flex: 0 1 350px;
+            flex: 0 1 350px;
   }
   .portfolio__slide {
     width: 300px;
-    height: 350px;
+    height: 300px;
+  }
+  .portfolio__btn-prev, .portfolio__btn-next {
+    width: 30px;
+    height: 30px;
   }
   .reviews__column {
     -webkit-box-flex: 0;
@@ -1190,6 +1230,10 @@ body, html {
   }
   .words {
     text-align: center;
+  }
+  .photos__button-prev, .photos__button-next {
+    width: 30px;
+    height: 30px;
   }
   .plan__point::after {
     top: 40px;
