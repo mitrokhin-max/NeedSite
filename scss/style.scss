@@ -196,6 +196,15 @@ $fz-text: 16px;
                 display: block;
             }
     }
+
+    &__subtitle {
+        font-weight: 500;
+        margin: 0 0 5px 0;
+        font-size: $fz-subtitle;
+    }
+
+    &__words {
+    }
 }
 
 .portfolio {

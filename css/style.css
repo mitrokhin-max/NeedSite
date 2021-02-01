@@ -272,6 +272,12 @@ body, html {
   display: block;
 }
 
+.advantages__subtitle {
+  font-weight: 500;
+  margin: 0 0 5px 0;
+  font-size: 20px;
+}
+
 .portfolio {
   height: 100%;
 }
