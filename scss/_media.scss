@@ -43,6 +43,12 @@
     $fz-subtitle: 20px;
     $fz-text: 16px;
 
+    .wrapper {
+        &__bg {
+            background-position: 0 0;
+        }
+    }
+
     .main {
         &__row {
             width: 70%;
@@ -87,6 +93,7 @@
     }
 }
 @media (max-width: 767.98px) {
+
     .main {
         &__row {
             width: 90%;
@@ -125,6 +132,11 @@
     $fz-text: 14px;
 
     .wrapper {
+        &__bg {
+            left: 0;
+            background-position: 0 0;
+        }
+
         &__page {
             padding: 0 0 100px 0;
                 &:nth-child(6) {
@@ -212,12 +224,10 @@
         }
 
         &__text {
-            padding: 0 0 20px 0;
         }
 
         &__subtitle {
             font-size: $fz-subtitle;
-            margin: 0 0 10px 0;
             padding: 8px 0px 0 0;
         }
 
@@ -267,7 +277,7 @@
     }
 
     .form-contacts {
-        padding: 30px 20px;
+        padding: 20px;
 
         &__title {
             font-size: $fz_subtitle;
