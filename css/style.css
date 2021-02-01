@@ -630,7 +630,20 @@ body, html {
 
 .card__advantage {
   font-size: 16px;
-  margin: 3px 0px;
+  padding: 0 0 0 10px;
+  margin: 0px 0px 7px 0px;
+  position: relative;
+}
+
+.card__advantage::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  background-color: #a6e64d;
+  border-radius: 50%;
 }
 
 .card__price {
@@ -646,6 +659,7 @@ body, html {
 
 .card__price s {
   font-size: 16px;
+  margin: 0 5px 0 0;
 }
 
 .card__price span {
