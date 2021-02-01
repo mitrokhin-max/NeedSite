@@ -84,11 +84,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Убираю скролл */
-body, html {
+/* Основная оболочка сайта */
+.wrap {
   overflow: hidden;
 }
 
-/* Основная оболочка сайта */
 .wrapper {
   width: 100%;
   height: 100vh;
@@ -444,6 +444,10 @@ body, html {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.photos__button-prev.swiper-button-disabled, .photos__button-next.swiper-button-disabled {
+  opacity: 0.5;
 }
 
 .photos__button-prev {
@@ -1082,6 +1086,121 @@ body, html {
   -webkit-transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
           transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
   opacity: 1;
+}
+
+/* Страница политики конфиденциальности */
+.privacy {
+  overflow-x: hidden;
+  padding: 20px 0;
+}
+
+.privacy__logo {
+  width: 150px;
+  margin: 0 auto 20px auto;
+}
+
+.privacy__logo img {
+  max-width: 100%;
+}
+
+.privacy__title {
+  font-size: 30px;
+  margin: 0px 0px 20px 0px;
+}
+
+.privacy__text p {
+  font-size: 16px;
+  color: #000;
+  margin: 0 0 10px 0;
+  padding: 0 0 0 30px;
+}
+
+.privacy__subtitle {
+  font-size: 20px;
+  margin: 20px 0px 10px 0px;
+  padding: 0 0 5px 0;
+  border-bottom: 2px solid #a6e64d;
+}
+
+/* Страница успешной отправки заявки */
+.success {
+  overflow: hidden;
+  padding: 20px 0 0 0;
+}
+
+.success__logo {
+  width: 150px;
+  margin: 0 auto;
+}
+
+.success__logo img {
+  max-width: 100%;
+}
+
+.success__row {
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.success__col {
+  margin: 0px 0px 20px 0px;
+}
+
+.success__img {
+  margin: 0px 0px 20px 0px;
+  border-radius: 50%;
+  background-color: #a6e64d;
+  width: 120px;
+  height: 120px;
+  position: relative;
+}
+
+.success__img::before, .success__img::after {
+  content: '';
+  position: absolute;
+  bottom: 22px;
+  width: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.success__img::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  height: 50px;
+  left: 30px;
+}
+
+.success__img::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  height: 70px;
+  left: 61.3px;
+}
+
+.success__thanks {
+  font-size: 30px;
+  text-align: center;
+  margin: 0px 0px 20px 0px;
+}
+
+.success__text {
+  font-size: 20px;
+  color: #000;
+  text-align: center;
+  margin: 0px 0px 20px 0px;
 }
 
 /* Адаптив */

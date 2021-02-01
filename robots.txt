@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /privacy.html
+Host: https://need-site.ru
+Sitemap: https://need-site.ru/sitemap.xml
