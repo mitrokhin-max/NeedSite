@@ -84,10 +84,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Убираю скролл */
-body, html {
-  position: relative;
-}
-
 /* Основная оболочка сайта */
 .wrap {
   width: 100%;
@@ -300,7 +296,8 @@ body, html {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin: 0 0 30px 0;
+  padding: 10px 0 10px 0;
+  position: relative;
 }
 
 .advantages__icon {
@@ -318,7 +315,23 @@ body, html {
   background-image: url(../img/monitor.svg);
 }
 
-.advantages__icon_monitor.active, .advantages__icon_monitor:hover {
+.advantages__icon_monitor.active {
+  background-image: url(../img/monitor-active.svg);
+}
+
+.advantages__icon_monitor.active::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 33.33%;
+  height: 100%;
+  background-color: rgba(233, 233, 233, 0.5);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.advantages__icon_monitor:hover {
   background-image: url(../img/monitor-active.svg);
 }
 
@@ -326,7 +339,23 @@ body, html {
   background-image: url(../img/like.svg);
 }
 
-.advantages__icon_like.active, .advantages__icon_like:hover {
+.advantages__icon_like.active {
+  background-image: url(../img/like-active.svg);
+}
+
+.advantages__icon_like.active::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 33.33%;
+  width: 33.33%;
+  height: 100%;
+  background-color: rgba(233, 233, 233, 0.5);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.advantages__icon_like:hover {
   background-image: url(../img/like-active.svg);
 }
 
@@ -334,11 +363,30 @@ body, html {
   background-image: url(../img/presentation.svg);
 }
 
-.advantages__icon_presentation.active, .advantages__icon_presentation:hover {
+.advantages__icon_presentation.active {
+  background-image: url(../img/presentation-active.svg);
+}
+
+.advantages__icon_presentation.active::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 66.66%;
+  width: 33.33%;
+  height: 100%;
+  background-color: rgba(233, 233, 233, 0.5);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.advantages__icon_presentation:hover {
   background-image: url(../img/presentation-active.svg);
 }
 
 .advantages__description {
+  background-color: rgba(233, 233, 233, 0.5);
+  padding: 20px;
+  border-radius: 10px;
   color: #000;
   font-size: 16px;
   line-height: 1.2em;
@@ -475,15 +523,23 @@ body, html {
   height: auto;
 }
 
+.words__slide {
+  background-color: rgba(233, 233, 233, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+}
+
 .words__name {
   color: #000;
   font-size: 20px;
+  font-weight: 500;
   margin: 0 0 20px 0;
 }
 
 .words__text {
   color: #000;
   font-size: 16px;
+  line-height: 1.2em;
 }
 
 .photos {
@@ -617,6 +673,7 @@ body, html {
 
 .plan__description {
   font-size: 16px;
+  line-height: 1.1em;
 }
 
 .price {
@@ -681,7 +738,7 @@ body, html {
 
 .card {
   min-height: 200px;
-  background-color: rgba(243, 243, 243, 0.6);
+  background-color: rgba(233, 233, 233, 0.5);
   border-radius: 10px;
 }
 
@@ -822,7 +879,7 @@ body, html {
 
 .form-contacts {
   max-width: 450px;
-  background-color: rgba(240, 240, 240, 0.5);
+  background-color: rgba(233, 233, 233, 0.5);
   padding: 20px;
   border-radius: 10px;
 }
@@ -986,7 +1043,7 @@ body, html {
 
 .popup__content {
   max-width: 800px;
-  background-color: #f0f0f0;
+  background-color: #e9e9e9;
   padding: 30px 30px 20px 30px;
   border-radius: 10px;
   position: relative;
@@ -1416,11 +1473,17 @@ body, html {
   .title {
     margin: 0 0 30px 0;
   }
+  .advantages__items {
+    padding: 5px 0 10px 0;
+  }
   .advantages__icon {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 50px;
             flex: 0 1 50px;
     height: 50px;
+  }
+  .advantages__description {
+    padding: 10px;
   }
   .portfolio__slider {
     -webkit-box-flex: 0;
@@ -1445,6 +1508,9 @@ body, html {
   }
   .words {
     text-align: center;
+  }
+  .words__slide {
+    padding: 10px;
   }
   .photos__button-prev, .photos__button-next {
     width: 30px;

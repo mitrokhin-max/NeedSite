@@ -177,9 +177,17 @@
     }
 
     .advantages {
+        &__items {
+            padding: 5px 0 10px 0;
+        }
+
         &__icon {
             flex: 0 1 50px;
             height: 50px;
+        }
+
+        &__description {
+            padding: 10px;
         }
     }
 
@@ -210,6 +218,10 @@
 
     .words {
         text-align: center;
+
+        &__slide {
+            padding: 10px;
+        }
     }
 
     .photos {
