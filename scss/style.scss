@@ -1055,13 +1055,48 @@ $fz-text: 16px;
 
     &__logo {
         width: 150px;
-        margin: 0 auto 20px auto;
+        margin: 0 auto 30px auto;
         img {
             max-width: 100%;
         }
     }
 
+    &__btn {
+        text-align: center;
+        margin: 0 0 20px 0;
+    }
+
+    &__button {
+        display: inline-block;
+        font-size: $fz-subtitle;
+        color: $color-dop;
+        padding: 10px;
+        position: relative;
+        transition: 300ms;
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: $color-third;
+            transform: skewX(-20deg);
+        }
+        
+        span {
+            position: relative;
+            z-index: 2;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
     &__title {
+        text-align: center;
         font-size: $fz_title;
         margin: 0px 0px 20px 0px;
     }
@@ -1079,7 +1114,7 @@ $fz-text: 16px;
         font-size: $fz_subtitle;
         margin: 20px 0px 10px 0px;
         padding: 0 0 5px 0;
-        border-bottom: 2px solid $color_first;
+        border-bottom: 2px solid $color_third;
     }
 }
 
@@ -1113,7 +1148,7 @@ $fz-text: 16px;
 		&__img {
             margin: 0px 0px 20px 0px;
             border-radius: 50%;
-            background-color: $color_first;
+            background-color: #6a86ca;
             width: 120px;
             height: 120px;
             position: relative;
