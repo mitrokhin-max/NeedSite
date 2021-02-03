@@ -17,6 +17,10 @@ body, html {
     overflow: hidden;
 }
 
+.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 15px 0;
+}
+
 .wrapper {
 width: 100%;
 height: 100%;
@@ -41,22 +45,55 @@ position: relative;
     }
 
     &__menu {
+        left: 80%;
     }
 
     .swiper-pagination-bullet {
-        width: 20px;
-        height: 20px;
-        text-align: center;
-        line-height: 20px;
-        font-size: 12px;
-        color: #000;
+        width: 30px;
+        height: 8px;
+        border-radius: 2px;
         opacity: 1;
         background: rgba(0, 0, 0, 0.2);
+        position: relative;
+        transition: 300ms;
+
+            &:after {
+                font-size: 16px;
+                
+                position: absolute;
+                top: -4px;
+                left: 50px;
+            }
+            &:nth-child(1):after {
+                content: 'Главная';
+            }
+            &:nth-child(2):after {
+                content: 'Преимущства';
+            }
+            &:nth-child(3):after {
+                content: 'Портфолио';
+            }
+            &:nth-child(4):after {
+                content: 'Отзывы';
+            }
+            &:nth-child(5):after {
+                content: 'Схема';
+            }
+            &:nth-child(6):after {
+                content: 'Цены';
+            }
+            &:nth-child(7):after {
+                content: 'Контакты';
+            }
     }
     
     .swiper-pagination-bullet-active {
-        color: #fff;
-        background: #007aff;
+        width: 40px;
+        background: #f99746;
+            &::after {
+                color: #f99746;
+                font-weight: 500;
+            }
     }
 }
 /* Шрифты */
@@ -65,7 +102,8 @@ body, html {font-family: 'Montserrat', sans-serif;}
 /* Переменные */
 $color-first: #a6e64d;
 $color-second: #000;
-$color-third: #000;
+$color-third: #f99746;
+$color-dop: #fff;
 $fz-h1: 40px;
 $fz-title: 30px;
 $fz-subtitle: 20px;
@@ -103,7 +141,7 @@ $fz-text: 16px;
     }
 
     &__text {
-        color: $color-third;
+        color: $color-second;
         font-size: $fz-subtitle;
         line-height: 1.1em;
         margin: 0 0 40px 0;
@@ -128,11 +166,30 @@ $fz-text: 16px;
 }
 
 .title {
+    align-self: center;
     text-align: center;
-    color: $color-first;
+    color: #fff;
     font-size: $fz-title;
     font-weight: 500;
     margin: 0 0 40px 0;
+    padding: 7px 10px;
+    position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: $color-third;
+            transform: skewX(-20deg);
+        }
+        
+        span {
+            position: relative;
+            z-index: 2;
+        }
 }
 
 .advantages {
@@ -223,7 +280,6 @@ $fz-text: 16px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
     }
 
     &__title {
@@ -397,7 +453,6 @@ $fz-text: 16px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
     }
 
     &__title {
@@ -487,7 +542,12 @@ $fz-text: 16px;
         height: auto;
     }
 
+    &__head {
+        text-align: center;
+    }
+
     &__title {
+        display: inline-block;
     }
 
     &__content {

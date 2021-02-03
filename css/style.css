@@ -90,6 +90,10 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
+.swiper-container-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 15px 0;
+}
+
 .wrapper {
   width: 100%;
   height: 100%;
@@ -108,20 +112,64 @@ h1, h2, h3, h4, h5, h6 {
   background-repeat: no-repeat;
 }
 
+.wrapper__menu {
+  left: 80%;
+}
+
 .wrapper .swiper-pagination-bullet {
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  line-height: 20px;
-  font-size: 12px;
-  color: #000;
+  width: 30px;
+  height: 8px;
+  border-radius: 2px;
   opacity: 1;
   background: rgba(0, 0, 0, 0.2);
+  position: relative;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.wrapper .swiper-pagination-bullet:after {
+  font-size: 16px;
+  position: absolute;
+  top: -4px;
+  left: 50px;
+}
+
+.wrapper .swiper-pagination-bullet:nth-child(1):after {
+  content: 'Главная';
+}
+
+.wrapper .swiper-pagination-bullet:nth-child(2):after {
+  content: 'Преимущства';
+}
+
+.wrapper .swiper-pagination-bullet:nth-child(3):after {
+  content: 'Портфолио';
+}
+
+.wrapper .swiper-pagination-bullet:nth-child(4):after {
+  content: 'Отзывы';
+}
+
+.wrapper .swiper-pagination-bullet:nth-child(5):after {
+  content: 'Схема';
+}
+
+.wrapper .swiper-pagination-bullet:nth-child(6):after {
+  content: 'Цены';
+}
+
+.wrapper .swiper-pagination-bullet:nth-child(7):after {
+  content: 'Контакты';
 }
 
 .wrapper .swiper-pagination-bullet-active {
-  color: #fff;
-  background: #007aff;
+  width: 40px;
+  background: #f99746;
+}
+
+.wrapper .swiper-pagination-bullet-active::after {
+  color: #f99746;
+  font-weight: 500;
 }
 
 /* Шрифты */
@@ -193,11 +241,34 @@ body, html {
 }
 
 .title {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   text-align: center;
-  color: #a6e64d;
+  color: #fff;
   font-size: 30px;
   font-weight: 500;
   margin: 0 0 40px 0;
+  padding: 7px 10px;
+  position: relative;
+}
+
+.title::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f99746;
+  -webkit-transform: skewX(-20deg);
+          transform: skewX(-20deg);
+}
+
+.title span {
+  position: relative;
+  z-index: 2;
 }
 
 .advantages {
@@ -295,9 +366,6 @@ body, html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .portfolio__slider {
@@ -475,9 +543,6 @@ body, html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .plan__content {
@@ -571,6 +636,14 @@ body, html {
 
 .price__slide {
   height: auto;
+}
+
+.price__head {
+  text-align: center;
+}
+
+.price__title {
+  display: inline-block;
 }
 
 .price__content {
