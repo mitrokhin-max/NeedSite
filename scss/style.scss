@@ -328,10 +328,15 @@ $fz-text: 16px;
         width: 40px;
         height: 40px;
         cursor: pointer;
+        transition: 300ms;
         img {
             height: 100%;
             width: 100%;
             object-fit: cover;
+        }
+
+        &:hover {
+            transform: scale(0.9);
         }
     }
 
@@ -439,14 +444,22 @@ $fz-text: 16px;
         width: 40px;
         height: 40px;
         cursor: pointer;
+        transition: 300ms;
         img {
             height: 100%;
             width: 100%;
             object-fit: cover;
         }
 
+        &:hover {
+            transform: scale(0.9);
+        }
+
         &.swiper-button-disabled {
             opacity: 0.5;
+            &:hover {
+                transform: none;
+            }
         }
     }
 

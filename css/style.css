@@ -408,6 +408,8 @@ body, html {
   width: 40px;
   height: 40px;
   cursor: pointer;
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
 
 .portfolio__btn-prev img, .portfolio__btn-next img {
@@ -415,6 +417,11 @@ body, html {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.portfolio__btn-prev:hover, .portfolio__btn-next:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 .portfolio__btn-prev {
@@ -522,6 +529,8 @@ body, html {
   width: 40px;
   height: 40px;
   cursor: pointer;
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
 
 .photos__button-prev img, .photos__button-next img {
@@ -531,8 +540,18 @@ body, html {
      object-fit: cover;
 }
 
+.photos__button-prev:hover, .photos__button-next:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
 .photos__button-prev.swiper-button-disabled, .photos__button-next.swiper-button-disabled {
   opacity: 0.5;
+}
+
+.photos__button-prev.swiper-button-disabled:hover, .photos__button-next.swiper-button-disabled:hover {
+  -webkit-transform: none;
+          transform: none;
 }
 
 .photos__button-prev {
