@@ -7,10 +7,7 @@
     padding: 0 15px 0 15px;
     height: 100%;
 }
-/* Убираю скролл */
-body, html {
-    // position: relative;
-}
+
 /* Основная оболочка сайта */
 .wrap {
     width: 100%;
@@ -19,9 +16,9 @@ body, html {
     overflow: hidden;
 }
 
-.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet {
-    margin: 15px 0;
-}
+// .swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet {
+//     margin: 15px 0;
+// }
 
 .wrapper {
 width: 100%;
@@ -223,7 +220,7 @@ $fz-text: 16px;
 
     &__icon {
         flex: 0 1 33.333%;
-        height: 70px;
+        height: 80px;
         cursor: pointer;
         background-position: center;
         background-size: 60px;
