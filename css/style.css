@@ -1220,7 +1220,7 @@ body, html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #f99746;
+  background: #6a86ca;
   -webkit-transform: skewX(-20deg);
           transform: skewX(-20deg);
 }
@@ -1252,26 +1252,28 @@ body, html {
   font-size: 20px;
   margin: 20px 0px 10px 0px;
   padding: 0 0 5px 0;
-  border-bottom: 2px solid #f99746;
+  border-bottom: 2px solid #6a86ca;
 }
 
 /* Страница успешной отправки заявки */
 .success {
+  height: calc(100vh - 100px);
   overflow: hidden;
   padding: 20px 0 0 0;
 }
 
 .success__logo {
-  width: 150px;
+  height: 100px;
+  width: 100px;
   margin: 0 auto;
 }
 
 .success__logo img {
-  max-width: 100%;
+  max-height: 100%;
 }
 
 .success__row {
-  height: 70vh;
+  height: calc(100% - 120px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1285,10 +1287,6 @@ body, html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.success__col {
-  margin: 0px 0px 20px 0px;
 }
 
 .success__img {
@@ -1333,7 +1331,7 @@ body, html {
   font-size: 20px;
   color: #000;
   text-align: center;
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 0px 0px;
 }
 
 /* Адаптив */
