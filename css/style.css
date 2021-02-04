@@ -296,42 +296,33 @@ body, html {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 10px 0 10px 0;
-  position: relative;
+  padding: 10px 0 0px 0;
 }
 
 .advantages__icon {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 70px;
-          flex: 0 1 70px;
+      -ms-flex: 0 1 33.333%;
+          flex: 0 1 33.333%;
   height: 70px;
   cursor: pointer;
   background-position: center;
-  background-size: cover;
+  background-size: 60px;
   background-repeat: no-repeat;
+  -webkit-transition: background-color 500ms;
+  transition: background-color 500ms;
+}
+
+.advantages__icon.active {
+  background-color: rgba(233, 233, 233, 0.5);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 
 .advantages__icon_monitor {
   background-image: url(../img/monitor.svg);
 }
 
-.advantages__icon_monitor.active {
-  background-image: url(../img/monitor-active.svg);
-}
-
-.advantages__icon_monitor.active::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 33.33%;
-  height: 100%;
-  background-color: rgba(233, 233, 233, 0.5);
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-}
-
-.advantages__icon_monitor:hover {
+.advantages__icon_monitor.active, .advantages__icon_monitor:hover {
   background-image: url(../img/monitor-active.svg);
 }
 
@@ -339,23 +330,7 @@ body, html {
   background-image: url(../img/like.svg);
 }
 
-.advantages__icon_like.active {
-  background-image: url(../img/like-active.svg);
-}
-
-.advantages__icon_like.active::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 33.33%;
-  width: 33.33%;
-  height: 100%;
-  background-color: rgba(233, 233, 233, 0.5);
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-}
-
-.advantages__icon_like:hover {
+.advantages__icon_like.active, .advantages__icon_like:hover {
   background-image: url(../img/like-active.svg);
 }
 
@@ -363,30 +338,15 @@ body, html {
   background-image: url(../img/presentation.svg);
 }
 
-.advantages__icon_presentation.active {
-  background-image: url(../img/presentation-active.svg);
-}
-
-.advantages__icon_presentation.active::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 66.66%;
-  width: 33.33%;
-  height: 100%;
-  background-color: rgba(233, 233, 233, 0.5);
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-}
-
-.advantages__icon_presentation:hover {
+.advantages__icon_presentation.active, .advantages__icon_presentation:hover {
   background-image: url(../img/presentation-active.svg);
 }
 
 .advantages__description {
   background-color: rgba(233, 233, 233, 0.5);
   padding: 20px;
-  border-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   color: #000;
   font-size: 16px;
   line-height: 1.2em;
@@ -520,7 +480,7 @@ body, html {
 
 .words {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .words__slide {
@@ -1484,12 +1444,6 @@ body, html {
     left: 0;
     background-position: 0 0;
   }
-  .wrapper__page {
-    padding: 0 0 100px 0;
-  }
-  .wrapper__page:nth-child(6) {
-    padding: 0 0 0px 0;
-  }
   .wrapper .swiper-pagination-bullet {
     width: 15px;
     height: 15px;
@@ -1513,13 +1467,11 @@ body, html {
     margin: 0 0 30px 0;
   }
   .advantages__items {
-    padding: 5px 0 10px 0;
+    padding: 5px 0 0px 0;
   }
   .advantages__icon {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 50px;
-            flex: 0 1 50px;
     height: 50px;
+    background-size: 40px;
   }
   .advantages__description {
     padding: 10px;
