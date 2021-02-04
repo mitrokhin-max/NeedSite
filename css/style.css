@@ -1277,14 +1277,14 @@ body, html {
 
 /* Страница успешной отправки заявки */
 .success {
-  height: 100vh;
+  height: calc(100vh - 120px);
   overflow: hidden;
-  padding: 20px 0 120px 0;
+  padding: 20px 0 0px 0;
 }
 
 .success__logo {
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
   margin: 0 auto;
 }
 
@@ -1293,7 +1293,7 @@ body, html {
 }
 
 .success__row {
-  height: calc(100% - 120px);
+  height: calc(100% - 100px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
