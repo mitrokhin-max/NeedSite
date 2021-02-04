@@ -217,10 +217,15 @@
     }
 
     .words {
-        text-align: center;
+        
 
         &__slide {
             padding: 10px;
+        }
+
+        &__name {
+            margin: 0 0 10px 0;
+            text-align: center;
         }
     }
 
@@ -232,6 +237,12 @@
     }
 
     .plan {
+        &__content {
+            background-color: $color-transparent;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
         &__point {
             &::after {
                 top: 40px;
