@@ -1528,9 +1528,6 @@ body, html {
   .plan__description_1 {
     display: block;
   }
-  .price__slide {
-    padding: 20px 0 100px 0;
-  }
   .price__body {
     height: 100%;
   }
