@@ -372,14 +372,15 @@ $fz-text: 16px;
     }
 
     &__column {
-        overflow: hidden;
+        overflow-x: hidden;
+        height: 100%;
         // padding: 0 10px;
         &_w {
-            flex: 0 0 60%;
+            flex: 0 1 60%;
         }
 
         &_ph {
-            flex: 0 0 40%;
+            flex: 0 1 40%;
             display: flex;
             align-items: center;
         }

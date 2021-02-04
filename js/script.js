@@ -47,7 +47,6 @@ var portfolio = new Swiper('.portfolio__slider', {
 var words = new Swiper('.words', {
     // watchSlidesProgress: true,
     // watchSlidesVisibility: true,
-    // allowTouchMove: false,
     nested: true,
     autoHeight: true,
     slidesPerView: 1,

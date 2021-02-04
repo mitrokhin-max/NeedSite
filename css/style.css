@@ -459,19 +459,20 @@ body, html {
 }
 
 .reviews__column {
-  overflow: hidden;
+  overflow-x: hidden;
+  height: 100%;
 }
 
 .reviews__column_w {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 60%;
-          flex: 0 0 60%;
+      -ms-flex: 0 1 60%;
+          flex: 0 1 60%;
 }
 
 .reviews__column_ph {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 40%;
-          flex: 0 0 40%;
+      -ms-flex: 0 1 40%;
+          flex: 0 1 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
