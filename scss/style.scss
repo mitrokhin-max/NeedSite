@@ -234,23 +234,14 @@ $fz-text: 16px;
             border-top-left-radius: 10px;
         }
 
-        &_monitor {
-            background-image: url(../img/monitor.svg);
-                &.active, &:hover {
-                    background-image: url(../img/monitor-active.svg);
-                }
+        &_1 {
+            background-image: url(../img/cash.svg);
         }
-        &_like {
-            background-image: url(../img/like.svg);
-                &.active, &:hover {
-                    background-image: url(../img/like-active.svg);
-                }
+        &_2 {
+            background-image: url(../img/target.svg);
         }
-        &_presentation {
-            background-image: url(../img/presentation.svg);
-                &.active, &:hover {
-                    background-image: url(../img/presentation-active.svg);
-                }
+        &_3 {
+            background-image: url(../img/graphic.svg);
         }
     }
 

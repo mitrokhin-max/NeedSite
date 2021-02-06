@@ -313,28 +313,16 @@ body, html {
   border-top-left-radius: 10px;
 }
 
-.advantages__icon_monitor {
-  background-image: url(../img/monitor.svg);
+.advantages__icon_1 {
+  background-image: url(../img/cash.svg);
 }
 
-.advantages__icon_monitor.active, .advantages__icon_monitor:hover {
-  background-image: url(../img/monitor-active.svg);
+.advantages__icon_2 {
+  background-image: url(../img/target.svg);
 }
 
-.advantages__icon_like {
-  background-image: url(../img/like.svg);
-}
-
-.advantages__icon_like.active, .advantages__icon_like:hover {
-  background-image: url(../img/like-active.svg);
-}
-
-.advantages__icon_presentation {
-  background-image: url(../img/presentation.svg);
-}
-
-.advantages__icon_presentation.active, .advantages__icon_presentation:hover {
-  background-image: url(../img/presentation-active.svg);
+.advantages__icon_3 {
+  background-image: url(../img/graphic.svg);
 }
 
 .advantages__description {
