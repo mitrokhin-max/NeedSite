@@ -96,8 +96,27 @@ position: relative;
     }
 }
 /* Шрифты */
-@import url(https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
-body, html {font-family: 'Montserrat', sans-serif;}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Medium.woff2') format('woff2'),
+        url('../fonts/Montserrat-Medium.woff') format('woff'),
+        url('../fonts/Montserrat-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+        url('../fonts/Montserrat-Regular.woff') format('woff'),
+        url('../fonts/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+body, html {
+    font-family: 'Montserrat', sans-serif;
+}
 /* Переменные */
 $color-first: #a6e64d;
 $color-second: #000;
@@ -535,9 +554,6 @@ $fz-text: 16px;
     &__description {
         font-size: $fz-text;
         line-height: 1.1em;
-        // background-color: $color-transparent;
-        // padding: 5px;
-        // border-radius: 10px;
     }
 }
 
@@ -585,7 +601,6 @@ $fz-text: 16px;
     }
 
     &__column {
-        // border: 1px solid red;
         flex: 0 1 25%;
         padding: 0 10px;
         display: flex;
@@ -1031,7 +1046,7 @@ $fz-text: 16px;
 
     &__btn {
         text-align: center;
-        margin: 0 0 20px 0;
+        margin: 20px 0 0px 0;
     }
 
     &__button {

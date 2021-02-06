@@ -45,8 +45,6 @@ var portfolio = new Swiper('.portfolio__slider', {
 });
 
 var words = new Swiper('.words', {
-    // watchSlidesProgress: true,
-    // watchSlidesVisibility: true,
     nested: true,
     autoHeight: true,
     slidesPerView: 1,
@@ -57,9 +55,6 @@ var words = new Swiper('.words', {
 });
 
 var photos = new Swiper('.photos', {
-    // controller: {
-    //     control: words,
-    // },
     nested: true,
     slidesPerView: 1,
     centeredSlides: true,

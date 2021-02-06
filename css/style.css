@@ -1,7 +1,6 @@
 @charset "UTF-8";
 /* Обнуление стилей */
 /*Обнуление*/
-@import url(https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 * {
   padding: 0;
   margin: 0;
@@ -169,6 +168,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Шрифты */
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 body, html {
   font-family: 'Montserrat', sans-serif;
 }
@@ -1208,7 +1223,7 @@ body, html {
 
 .privacy__btn {
   text-align: center;
-  margin: 0 0 20px 0;
+  margin: 20px 0 0px 0;
 }
 
 .privacy__button {
@@ -1369,7 +1384,6 @@ body, html {
   }
 }
 
-/* Переменные */
 @media (max-width: 1199.98px) {
   /* Переменные */
   .plan__content {

@@ -10,13 +10,13 @@ $comment = $_POST['user_comment'];
 $mail->isSMTP();
 $mail->Host = 'mail.hosting.reg.ru';
 $mail->SMTPAuth = true;
-$mail->Username = 'robot@need-site.ru'; // логин от почты с которой будут отправляться письма
-$mail->Password = '2143abcd'; // пароль от почты с которой будут отправляться письма
+$mail->Username = 'robot@wantweb.site'; // логин от почты с которой будут отправляться письма
+$mail->Password = 'bgbzst-2143'; // пароль от почты с которой будут отправляться письма
 $mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
 
-$mail->setFrom('robot@need-site.ru'); // От кого будет уходить письмо
-$mail->addAddress('mitrohmax@gmail.com'); // Кому будет уходить письмо
+$mail->setFrom('robot@wantweb.site'); // От кого будет уходить письмо
+$mail->addAddress('wantwebsite@mail.ru'); // Кому будет уходить письмо
 $mail->isHTML(true);
 
 $body = '<h2>Заявка на обратную связь</h2>';
