@@ -104,3 +104,9 @@ var price = new Swiper('.price__slider', {
     nested: true,
     mousewheel: true,
 });
+
+$(document).ready(function() {
+    /* Маска для телефона */
+    $("#phone_1").mask("+7 (999) 999-99-99");
+    $("#phone_2").mask("+7 (999) 999-99-99");
+});
